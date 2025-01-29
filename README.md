@@ -1,4 +1,4 @@
-# ML PROJECT: Microsoft Security Incident Prediction
+# Microsoft Security Incident Prediction
 
 In this repository you will find the code and the report for the machine learning project of the course APA 2024-Q2.
 In the src folder there are two notebooks, data folder, models folder and requirements files.
