@@ -1,31 +1,39 @@
 # Microsoft Security Incident Prediction
 
-In this repository you will find the code and the report for the machine learning project of the course APA 2024-Q2.
-In the src folder there are two notebooks, data folder, models folder and requirements files.
+This repository contains the code and report for the APA 2024-Q2 machine learning project. The project focuses on predicting cybersecurity incident triage outcomes using Microsoft’s GUIDE dataset — a large collection of real-world cybersecurity incidents that include over 13 million evidence pieces, 1.6 million alerts, and 1 million annotated incidents from more than 6,100 organizations. Our main goal is to aid Security Operations Centers (SOCs) with informed, context-rich recommendations rather than fully automating incident response. By employing machine learning, our models classify incidents into true positive (TP), benign positive (BP), and false positive (FP).
 
-## Src folder
-The src folder contains two notebooks:
-- `DataPreparation.ipynb`: This notebook contains the code to prepare the data for the project. It includes the data cleaning, feature engineering and data transformation.
+After evaluating multiple models, the Random Forest model was selected for its strong performance and efficiency, recording a precision of 0.84, recall of 0.794, and an F1-score of 0.809. This makes it well-suited for handling the inherent class imbalances in cybersecurity incident data.
 
-- `ModelTraining.ipynb`: This notebook contains the code to train the models for the project. It includes the code to train the models, evaluate the models and save the models.
+## Repository Structure
 
-### Data folder
-The data used for the project is Microsoft Incident Prediction dataset available in Kaggle, we used a subset of this dataset. The data folder contains the data used for the project.
+- **src folder**: Contains two Jupyter notebooks:
+  - **DataPreparation.ipynb**: Prepares the data by performing cleaning, feature engineering, and data transformation.
+  - **ModelTraining.ipynb**: Trains the machine learning models, evaluates them, and saves the trained models.
 
-### Models folder
-The models folder contains the trained models for the project. If in future there is need to use the models, they can be loaded from this folder.
+- **data folder**: Contains the subset of the Microsoft Incident Prediction dataset (from Kaggle) used in this project.
 
-### Requirements
-The requirements.txt file contains the libraries needed to run the notebooks.
+- **models folder**: Stores the trained models for future use or evaluation.
 
-## How to run the notebooks
-1. To run the notebooks you need to install the libraries in the requirements.txt file. This can be done by running the first cell in the notebooks.
-2. Run the cells in the `DataPreparation.ipynb` notebook to prepare the data.
-3. Run the cells in the `ModelTraining.ipynb` notebook to train the models.
+- **requirements.txt**: Lists the libraries required to run the notebooks.
+
+## How to Run the Notebooks
+
+1. **Install the dependencies:**  
+   Run the following command to install the required libraries:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+2. **Data Preparation:**  
+   Open and run the `DataPreparation.ipynb` notebook to clean, transform, and prepare the dataset.
+
+3. **Model Training:**  
+   Open and run the `ModelTraining.ipynb` notebook to train the machine learning models, evaluate their performance, and save the outputs in the models folder.
 
 ## Authors
 - Muhammad Yasin Khokhar
 - Momin Miah Begum
 
-## Github Repository
-- URL : https://github.com/yasin281/Microsoft-Security-Incident-Prediction
+## References
+- [GitHub Repository](https://github.com/yasin281/Microsoft-Security-Incident-Prediction)
+- [Dataset from Kaggle](https://www.kaggle.com/datasets/Microsoft/microsoft-security-incident-prediction)
